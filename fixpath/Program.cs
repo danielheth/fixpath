@@ -30,16 +30,18 @@ namespace cygfixpath
                 Console.WriteLine("");
             }
 
+            var key = arg.Substring(2, arg.Length - 2).Trim();
+
             if (arg.StartsWith("-s") || arg.StartsWith("--slash"))
             {
-                Console.Write(arg.Replace("/", "\\"));
+                Console.Write(key.Replace("/", "\\"));
+                return;
             }
 
-
-
-
+            
 
             var environmentDict = GetEnvironmentVariables();
+            if (environmentDict == null) return;
 
             if (arg.StartsWith("-E") || arg.StartsWith("--environment"))
             {
@@ -47,18 +49,20 @@ namespace cygfixpath
                 {
                     foreach (KeyValuePair<string, string> entry in environmentDict)
                         Console.WriteLine(entry.Key + "|" + entry.Value);
+                    return;
                 }
                 else
                 {
-                    var key = arg.Substring(2, arg.Length - 2).Trim();
                     if (environmentDict.ContainsKey(key))
                         Console.WriteLine(environmentDict[key]);
+                    return;
                 }
             }
             if (arg.StartsWith("-H") || arg.StartsWith("--home"))
             {
                 if (environmentDict.ContainsKey("USERPROFILE"))
                     Console.Write(environmentDict["USERPROFILE"].Replace("Users", @"cygdrive\" + environmentDict["USERPROFILE"].Substring(0,1).ToLower() + @"\Users"));
+                return;
             }
 
 #if DEBUG
