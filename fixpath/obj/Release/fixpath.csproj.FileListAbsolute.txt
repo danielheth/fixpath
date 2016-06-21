@@ -1,5 +1,0 @@
-C:\Users\daniel.moran\Documents\Visual Studio 2015\Projects\fixpath\fixpath\bin\Release\fixpath.exe.config
-C:\Users\daniel.moran\Documents\Visual Studio 2015\Projects\fixpath\fixpath\bin\Release\fixpath.exe
-C:\Users\daniel.moran\Documents\Visual Studio 2015\Projects\fixpath\fixpath\bin\Release\fixpath.pdb
-C:\Users\daniel.moran\Documents\Visual Studio 2015\Projects\fixpath\fixpath\obj\Release\fixpath.exe
-C:\Users\daniel.moran\Documents\Visual Studio 2015\Projects\fixpath\fixpath\obj\Release\fixpath.pdb
