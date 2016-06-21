@@ -2,3 +2,9 @@ c:\users\daniel.moran\documents\visual studio 2015\Projects\cygfixpath\cygfixpat
 c:\users\daniel.moran\documents\visual studio 2015\Projects\cygfixpath\cygfixpath\bin\Debug\fixpath.pdb
 c:\users\daniel.moran\documents\visual studio 2015\Projects\cygfixpath\cygfixpath\obj\Debug\fixpath.exe
 c:\users\daniel.moran\documents\visual studio 2015\Projects\cygfixpath\cygfixpath\obj\Debug\fixpath.pdb
+C:\Users\daniel.moran\Documents\Visual Studio 2015\Projects\fixpath\fixpath\obj\Debug\fixpath.exe
+C:\Users\daniel.moran\Documents\Visual Studio 2015\Projects\fixpath\fixpath\obj\Debug\fixpath.pdb
+C:\Users\daniel.moran\Documents\Visual Studio 2015\Projects\fixpath\fixpath\bin\Debug\fixpath.exe.config
+C:\Users\daniel.moran\Documents\Visual Studio 2015\Projects\fixpath\fixpath\bin\Debug\fixpath.exe
+C:\Users\daniel.moran\Documents\Visual Studio 2015\Projects\fixpath\fixpath\bin\Debug\fixpath.pdb
+C:\Users\daniel.moran\Documents\Visual Studio 2015\Projects\fixpath\fixpath\obj\Debug\fixpath.csprojResolveAssemblyReference.cache
