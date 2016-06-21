@@ -1,0 +1,4 @@
+c:\users\daniel.moran\documents\visual studio 2015\Projects\cygfixpath\cygfixpath\bin\Debug\fixpath.exe
+c:\users\daniel.moran\documents\visual studio 2015\Projects\cygfixpath\cygfixpath\bin\Debug\fixpath.pdb
+c:\users\daniel.moran\documents\visual studio 2015\Projects\cygfixpath\cygfixpath\obj\Debug\fixpath.exe
+c:\users\daniel.moran\documents\visual studio 2015\Projects\cygfixpath\cygfixpath\obj\Debug\fixpath.pdb

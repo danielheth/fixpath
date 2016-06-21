@@ -1,0 +1,5 @@
+c:\users\daniel.moran\documents\visual studio 2015\Projects\cygfixpath\cygfixpath\bin\Debug\cygfixpath.exe
+c:\users\daniel.moran\documents\visual studio 2015\Projects\cygfixpath\cygfixpath\bin\Debug\cygfixpath.pdb
+c:\users\daniel.moran\documents\visual studio 2015\Projects\cygfixpath\cygfixpath\obj\Debug\cygfixpath.csprojResolveAssemblyReference.cache
+c:\users\daniel.moran\documents\visual studio 2015\Projects\cygfixpath\cygfixpath\obj\Debug\cygfixpath.exe
+c:\users\daniel.moran\documents\visual studio 2015\Projects\cygfixpath\cygfixpath\obj\Debug\cygfixpath.pdb
