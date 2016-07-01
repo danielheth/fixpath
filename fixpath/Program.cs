@@ -27,43 +27,59 @@ namespace cygfixpath
                 Console.WriteLine("  -E, --environment  output all environmental variables and exit");
                 Console.WriteLine("  -U, --userprofile  output the `USERPROFILE` directory and exit");
                 Console.WriteLine("  -H, --home         output the cygwin home directory and exit");
+                Console.WriteLine("  -W, --workspace    output the current working directory and exit");
                 Console.WriteLine("");
+                return;
             }
 
-            var key = arg.Substring(2, arg.Length - 2).Trim();
+            var key = arg;
+            if (key.StartsWith("-")) key = arg.Substring(2, arg.Length - 2).Trim();
 
             if (arg.StartsWith("-s") || arg.StartsWith("--slash"))
             {
                 Console.Write(key.Replace("/", "\\"));
-                return;
             }
-
-            
-
-            var environmentDict = GetEnvironmentVariables();
-            if (environmentDict == null) return;
-
-            if (arg.StartsWith("-E") || arg.StartsWith("--environment"))
+            else if (arg.StartsWith("-W") || arg.StartsWith("--workspace"))
             {
-                if (arg.Trim().Equals("-E"))
-                {
-                    foreach (KeyValuePair<string, string> entry in environmentDict)
-                        Console.WriteLine(entry.Key + "|" + entry.Value);
-                    return;
-                }
-                else
-                {
-                    if (environmentDict.ContainsKey(key))
-                        Console.WriteLine(environmentDict[key]);
-                    return;
-                }
+                Console.WriteLine(Environment.CurrentDirectory);
             }
-            if (arg.StartsWith("-H") || arg.StartsWith("--home"))
+            else if (arg.StartsWith("-E") || arg.StartsWith("--environment") ||
+                     arg.StartsWith("-U") || arg.StartsWith("--userprofile"))
             {
-                if (environmentDict.ContainsKey("USERPROFILE"))
-                    Console.Write(environmentDict["USERPROFILE"].Replace("Users", @"cygdrive\" + environmentDict["USERPROFILE"].Substring(0,1).ToLower() + @"\Users"));
-                return;
+                var environmentDict = GetEnvironmentVariables();
+                if (environmentDict != null)
+                {
+
+                    if (arg.Trim().Equals("-E"))
+                    {
+                        foreach (KeyValuePair<string, string> entry in environmentDict)
+                            Console.WriteLine(entry.Key + "|" + entry.Value);
+                    }
+                    else
+                    {
+                        if (arg.Trim().Equals("-U") || arg.StartsWith("--userprofile"))
+                            key = "USERPROFILE";
+
+                        if (environmentDict.ContainsKey(key))
+                            Console.WriteLine(environmentDict[key]);
+                    }
+                }
             }
+            else if (arg.StartsWith("-H") || arg.StartsWith("--home"))
+            {
+                var environmentDict = GetEnvironmentVariables();
+                if (environmentDict != null)
+                {
+                    if (environmentDict.ContainsKey("USERPROFILE"))
+                        Console.Write(environmentDict["USERPROFILE"].Replace("Users",
+                            @"cygdrive\" + environmentDict["USERPROFILE"].Substring(0, 1).ToLower() + @"\Users"));
+                }
+            }
+            else
+            {
+                Console.Write(key);
+            }
+
 
 #if DEBUG
             Console.ReadLine();
